@@ -76,3 +76,25 @@ Stored in ‘file_dependencies’
 | Closest Disease Causing Gene List cdg_filename                | ‘CDG_data.txt’                         | Closest associated genes to known IEI genes. **THIS DOCUMENT REQUIRED RE-FORMATTING OF THE HEADERS:Gene<tab>HGMD_Gene<tab>HPO<tab>P_Value<tab>Route<tab>Associated_Disease**                                                                                                              | From CDG server (based on HGMD): https://lab.rockefeller.edu/casanova/CDGPaste in all genes from known gene list. Click download results on the top of page.Make sure to reformat headers (see notes).                    |
 | GENCODE GRCh38 and GRCh37 annotations gencode_GRCh3X_filename | ‘GENCODE_GRCh3X.gtf’                   | Chromosome and base pair coordinates for all human genes.                                                                                                                                                                                                                             | From Gencode: https://www.gencodegenes.orgDownload both GRCh38 and GRCh37 (in GTF format)                                                                                                                                 |
 | Immune HPO Terms immune_HPO_filename                          | ‘immune_HPO_terms_{date_updated}.xlsx’ | Static Document Includes all relevant immune-related HPO terms in CSV format                                                                                                                                                                                                          | Created by Benjamin Green.                                                                                                                                                                                                |
+
+## Instructions to Run
+
+Youtube video tutorials coming soon!
+
+(1) Ensure the pipeline’s files and file dependencies are all downloaded and in the correct directories
+
+(2) Place the VCF (in .xlsx) and HPO (.tsv) files inside the folder ‘input_dependencies’
+
+(3) Open ‘config.py’ with TextEdit or another text editor
+
+(4) Make sure the parameter ‘mode’ is set to ‘annotate_VCF’. Adjust the parameters ‘vcf_filename’ and ‘hpo_id_filename’ so that they point to the relevant files.
+
+(5) Adjust the parameter ‘write_to’ to where you want to write the annotated VCF. Typically, this is in the ‘generated_files’ directory.
+
+(6) Save, and then close the file.
+
+(7) On Mac: Open the terminal app. Change the directory to the ‘immuVCF’  folder using the command ‘cd immuVCF’. If you are lost, use the command ‘ls’ to list all files and directories in your current directory.
+
+(8) Once inside the folder ‘immuVCF’, run ‘main.py’ on Python by running the command: ‘python3 main.py’
+
+
